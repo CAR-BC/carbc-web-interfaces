@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/navSideBar.css">
+
+
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="#">Shantha Service Center</a>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" id="searchVehicleInServiceStationId" type="search" placeholder="Search vehicle" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" onclick="searchVehicleInServiceStation()" type="button">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <nav class="nav-side-menu">
+            <!--<ul>-->
+                <!--<li><a href="#">London</a></li>-->
+                <!--<li><a href="#">Paris</a></li>-->
+                <!--<li><a href="#">Tokyo</a></li>-->
+            <!--</ul>-->
+
+                <!--<div class="brand">Brand Logo</div>-->
+                <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+                <div class="menu-list">
+
+                    <ul id="menu-content" class="menu-content collapse out">
+                        <!--<li>-->
+                            <!--<a href="#">-->
+                                <!--<i class="fa fa-dashboard fa-lg"></i> Dashboard-->
+                            <!--</a>-->
+                        <!--</li>-->
+
+                        <!--<li  data-toggle="collapse" data-target="#products" class="collapsed active">-->
+                            <!--<a href="#"><i class="fa fa-gift fa-lg"></i> UI Elements <span class="arrow"></span></a>-->
+                        <!--</li>-->
+                        <!--<ul class="sub-menu collapse" id="products">-->
+                            <!--<li class="active"><a href="#">CSS3 Animation</a></li>-->
+                            <!--<li><a href="#123">General</a></li>-->
+                            <!--<li><a href="#">Buttons</a></li>-->
+                            <!--<li><a href="#">Tabs & Accordions</a></li>-->
+                            <!--<li><a href="#">Typography</a></li>-->
+                            <!--<li><a href="#">FontAwesome</a></li>-->
+                            <!--<li><a href="#">Slider</a></li>-->
+                            <!--<li><a href="#">Panels</a></li>-->
+                            <!--<li><a href="#">Widgets</a></li>-->
+                            <!--<li><a href="#">Bootstrap Model</a></li>-->
+                        <!--</ul>-->
+
+
+                        <li data-toggle="collapse" data-target="#service" class="collapsed">
+                            <a href="#"><i class="fa fa-globe fa-lg"></i> Services <span class="arrow"></span></a>
+                        </li>
+                        <ul class="sub-menu collapse" id="service">
+                            <li onclick="loadAddServiceRecordPage()">New Service Record</li>
+                            <li onclick="loadAddServiceTypePage()">New Service Type</li>
+                        </ul>
+
+
+                        <li data-toggle="collapse" data-target="#new" class="collapsed">
+                            <a href="#"><i class="fa fa-car fa-lg"></i> New <span class="arrow"></span></a>
+                        </li>
+                        <ul class="sub-menu collapse" id="new">
+                            <li>New New 1</li>
+                            <li>New New 2</li>
+                            <li>New New 3</li>
+                        </ul>
+
+
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-user fa-lg"></i> Profile
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-users fa-lg"></i> Users
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+        </nav>
+
+        <article>
+
+
+
+            <div class="container-fluid" id="content">
+                <h3>Service History</h3>
+
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Record ID</th>
+                        <th>Vehicle ID</th>
+                        <th>Serviced Date</th>
+                        <th>Service</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tableBody">
+
+                    </tbody>
+                </table>
+            </div>
+
+            <!--<iframe src="Pages/addServiceRecordPage.html" height="100%" width="100%"></iframe>-->
+
+        </article>
+    </section>
+
+    <!--<footer>-->
+        <!--<p>Footer</p>-->
+    <!--</footer>-->
+</div>
+
+
+
+<!--<header class="main-header">-->
+    <!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
+        <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">-->
+            <!--<span class="navbar-toggler-icon"></span>-->
+        <!--</button>-->
+        <!--<div class="collapse navbar-collapse" id="navbarTogglerDemo01">-->
+            <!--<a class="navbar-brand" href="#">Hidden brand</a>-->
+            <!--<ul class="navbar-nav mr-auto mt-2 mt-lg-0">-->
+                <!--<li class="nav-item active">-->
+                    <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                    <!--<a class="nav-link" href="#">Link</a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                    <!--<a class="nav-link disabled" href="#">Disabled</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<form class="form-inline my-2 my-lg-0">-->
+                <!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+                <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+            <!--</form>-->
+        <!--</div>-->
+    <!--</nav>-->
+<!--</header>-->
+
+<!--<aside class="main-sidebar">-->
+    <!--<section>-->
+        <!--<div class="container-fluid">-->
+            <!--<div class="row row-offcanvas row-offcanvas-left">-->
+                <!--<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">-->
+
+                    <!--<div class="nav-side-menu">-->
+                        <!--<div class="brand">Brand Logo</div>-->
+                        <!--<i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>-->
+
+                        <!--<div class="menu-list">-->
+
+                            <!--<ul id="menu-content" class="menu-content collapse out">-->
+                                <!--<li>-->
+                                    <!--<a href="#">-->
+                                        <!--<i class="fa fa-dashboard fa-lg"></i> Dashboard-->
+                                    <!--</a>-->
+                                <!--</li>-->
+
+                                <!--<li  data-toggle="collapse" data-target="#products" class="collapsed active">-->
+                                    <!--<a href="#"><i class="fa fa-gift fa-lg"></i> UI Elements <span class="arrow"></span></a>-->
+                                <!--</li>-->
+                                <!--<ul class="sub-menu collapse" id="products">-->
+                                    <!--<li class="active"><a href="#">CSS3 Animation</a></li>-->
+                                    <!--<li><a href="#">General</a></li>-->
+                                    <!--<li><a href="#">Buttons</a></li>-->
+                                    <!--<li><a href="#">Tabs & Accordions</a></li>-->
+                                    <!--<li><a href="#">Typography</a></li>-->
+                                    <!--<li><a href="#">FontAwesome</a></li>-->
+                                    <!--<li><a href="#">Slider</a></li>-->
+                                    <!--<li><a href="#">Panels</a></li>-->
+                                    <!--<li><a href="#">Widgets</a></li>-->
+                                    <!--<li><a href="#">Bootstrap Model</a></li>-->
+                                <!--</ul>-->
+
+
+                                <!--<li data-toggle="collapse" data-target="#service" class="collapsed">-->
+                                    <!--<a href="#"><i class="fa fa-globe fa-lg"></i> Services <span class="arrow"></span></a>-->
+                                <!--</li>-->
+                                <!--<ul class="sub-menu collapse" id="service">-->
+                                    <!--<li>New Service 1</li>-->
+                                    <!--<li>New Service 2</li>-->
+                                    <!--<li>New Service 3</li>-->
+                                <!--</ul>-->
+
+
+                                <!--<li data-toggle="collapse" data-target="#new" class="collapsed">-->
+                                    <!--<a href="#"><i class="fa fa-car fa-lg"></i> New <span class="arrow"></span></a>-->
+                                <!--</li>-->
+                                <!--<ul class="sub-menu collapse" id="new">-->
+                                    <!--<li>New New 1</li>-->
+                                    <!--<li>New New 2</li>-->
+                                    <!--<li>New New 3</li>-->
+                                <!--</ul>-->
+
+
+                                <!--<li>-->
+                                    <!--<a href="#">-->
+                                        <!--<i class="fa fa-user fa-lg"></i> Profile-->
+                                    <!--</a>-->
+                                <!--</li>-->
+
+                                <!--<li>-->
+                                    <!--<a href="#">-->
+                                        <!--<i class="fa fa-users fa-lg"></i> Users-->
+                                    <!--</a>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</section>-->
+<!--</aside>-->
+
+
+
+</body>
+<!--<script src="JS/jquery.min.js"></script>-->
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="JS/serviceRecords.js"></script>
+<script src="JS/sideNav.js"></script>
+<script src="JS/serviceTypePage.js"></script>
+
+<!-- Javascript -->
+<script>
+    var availableTutorials;
+    $(function() {
+        availableTutorials  =  [
+            "ActionScript",
+            "Bootstrap",
+            "C",
+            "C++",
+        ];
+        $( "#automplete-1" ).autocomplete({
+            source: availableTutorials
+        });
+    });
+
+
+</script>
+
+
+
+</html>

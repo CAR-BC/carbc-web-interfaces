@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/navSideBar.css">
+
+
+
+</head>
+<body>
+
+<div class="container-fluid" id="content">
+    <h3>Service Types</h3>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-3">
+                    <i class="fa fa-comments fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                    <div class="huge">26</div>
+                    <div>New Comments!</div>
+                </div>
+            </div>
+        </div>
+        <a href="#">
+            <div class="panel-footer">
+                <span class="pull-left">View Details</span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                <div class="clearfix"></div>
+            </div>
+        </a>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            New Service Type
+        </div>
+        <div class="card-body">
+            <div class="inside" id="newServiceField">
+                <input class="form-control" style="margin-bottom: 10px" type="text" placeholder="Default input" id="showthis">
+                <input class="form-control" type="text" placeholder="Default input" id="showthis1">
+                <input class="form-control" type="text" placeholder="Default input" id="showthis11">
+            </div>
+            <button class="btn btn-primary" style="width: 100px" onclick="addNewInputField()">+ Add New</button>
+            <button class="btn btn-primary" style="width: 100px" onclick="submitServiceTypes()">Submit</button>
+        </div>
+    </div>
+
+    <!--service type page-->
+    <div class="card" style="margin-top: 20px">
+        <div class="card-header">
+            Featured
+        </div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Service Type</th>
+                </tr>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--//service type page-->
+
+    <!--add record page-->
+    <div class="card" style="margin-top: 20px">
+        <div class="card-header">
+            <h5>Add new Service Record</h5>
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="vehicleId" style="font-size: large">Vehicle ID</label>
+                <input type="text" class="form-control" id="vehicleId" placeholder="Enter Vehicle ID">
+                <!--<small id="emailHelp" class="form-text text-muted">We\ll never share your email with anyone else.</small>-->
+            </div>
+            <div class="form-group">
+                <label>Services</label>
+            </div>
+            <div id="services">
+
+            </div>
+            <button onclick="submitServiceRecord()" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+    <!--//add record page-->
+
+</div>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!--<script src="JS/serviceRecords.js"></script>-->
+<!--<script src="JS/sideNav.js"></script>-->
+</html>
